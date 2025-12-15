@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section scroll highlight effect */
+section:target {
+  animation: sectionHighlight 1s ease-out;
+}
+
+@keyframes sectionHighlight {
+  0% {
+    background-color: hsl(var(--sakura) / 0.1);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@layer base {
+  :root {
+    /* Japanese-inspired cream and indigo palette */
+    --background: 40 30% 97%;
+    --foreground: 230 25% 15%;
+
+    --card: 40 25% 95%;
+    --card-foreground: 230 25% 15%;
+
+    --popover: 40 30% 97%;
+    --popover-foreground: 230 25% 15%;
+
+    /* Deep indigo primary */
+    --primary: 235 35% 25%;
+    --primary-foreground: 40 30% 97%;
+
+    /* Soft sakura pink */
+    --secondary: 350 60% 85%;
+    --secondary-foreground: 350 50% 25%;
+
+    --muted: 40 20% 90%;
+    --muted-foreground: 230 15% 45%;
+
+    /* Gold accent */
+    --accent: 38 70% 55%;
+    --accent-foreground: 40 30% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 235 35% 25%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --sakura: 350 65% 80%;
+    --indigo-dark: 235 40% 18%;
+    --cream: 40 35% 94%;
+    --gold: 38 75% 50%;
+    --text-soft: 230 15% 35%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, hsl(235 35% 20% / 0.85), hsl(235 35% 15% / 0.95));
+    --gradient-sakura: linear-gradient(135deg, hsl(350 65% 85%), hsl(350 55% 75%));
+    --gradient-gold: linear-gradient(135deg, hsl(38 75% 55%), hsl(45 80% 60%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(230 25% 15% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(230 25% 15% / 0.12);
+    --shadow-glow: 0 0 40px hsl(350 65% 80% / 0.3);
+
+    /* Sidebar (keeping defaults) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 235 30% 10%;
+    --foreground: 40 25% 92%;
+
+    --card: 235 28% 14%;
+    --card-foreground: 40 25% 92%;
+
+    --popover: 235 30% 10%;
+    --popover-foreground: 40 25% 92%;
+
+    --primary: 40 30% 92%;
+    --primary-foreground: 235 30% 10%;
+
+    --secondary: 350 45% 25%;
+    --secondary-foreground: 350 60% 85%;
+
+    --muted: 235 25% 18%;
+    --muted-foreground: 40 15% 65%;
+
+    --accent: 38 65% 45%;
+    --accent-foreground: 235 30% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 235 25% 20%;
+    --input: 235 25% 20%;
+    --ring: 40 30% 92%;
+
+    --sakura: 350 50% 35%;
+    --indigo-dark: 235 35% 8%;
+    --cream: 40 20% 15%;
+    --gold: 38 60% 40%;
+    --text-soft: 40 15% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 py-16 md:py-24;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-semibold text-primary mb-4 tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-muted-foreground max-w-2xl;
+  }
+
+  .cultural-card {
+    @apply bg-card rounded-xl p-6 border border-border/50 transition-all duration-300;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .cultural-card:hover {
+    box-shadow: var(--shadow-card);
+    @apply -translate-y-1;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-sakura);
+  }
+
+  .divider-sakura {
+    @apply h-px w-24 mx-auto;
+    background: var(--gradient-sakura);
+  }
+
+  .icon-circle {
+    @apply w-14 h-14 rounded-full flex items-center justify-center;
+    background: hsl(var(--sakura) / 0.2);
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
