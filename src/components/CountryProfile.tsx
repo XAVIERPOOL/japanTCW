@@ -1,4 +1,6 @@
-import { MapPin, Users, Calendar, Flag } from "lucide-react";
+import { MapPin, Users, Calendar, Flag, Landmark, Languages } from "lucide-react";
+import { JapanStats } from "@/components/JapanStats";
+import { HistoricalTimeline } from "@/components/HistoricalTimeline";
 
 const facts = [
   {
@@ -12,7 +14,7 @@ const facts = [
     value: "125.7 Million",
   },
   {
-    icon: Flag,
+    icon: Languages,
     label: "Official Language",
     value: "Japanese",
   },
@@ -21,15 +23,16 @@ const facts = [
     label: "National Day",
     value: "February 11",
   },
-];
-
-const timeline = [
-  { year: "660 BCE", event: "Legendary founding by Emperor Jimmu" },
-  { year: "794", event: "Heian period begins, golden age of art" },
-  { year: "1603", event: "Edo period - 250 years of peace" },
-  { year: "1868", event: "Meiji Restoration - modernization begins" },
-  { year: "1947", event: "Post-war constitution adopted" },
-  { year: "Present", event: "World's 3rd largest economy" },
+  {
+    icon: Flag,
+    label: "Government",
+    value: "Constitutional Monarchy",
+  },
+  {
+    icon: Landmark,
+    label: "Currency",
+    value: "Japanese Yen (¥)",
+  },
 ];
 
 export function CountryProfile() {
@@ -45,6 +48,14 @@ export function CountryProfile() {
           cutting-edge technology, and unique cultural identity.
         </p>
         <div className="divider-sakura mt-8" />
+      </div>
+
+      {/* Japan Stats - Key Metrics */}
+      <div className="mb-16">
+        <h3 className="font-serif text-2xl font-semibold text-center mb-8 text-foreground">
+          Key Statistics
+        </h3>
+        <JapanStats />
       </div>
 
       <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -84,9 +95,8 @@ export function CountryProfile() {
           </div>
         </div>
 
-        {/* Facts and Timeline */}
+        {/* Key Facts */}
         <div className="space-y-6">
-          {/* Key Facts */}
           <div className="grid grid-cols-2 gap-4">
             {facts.map((fact) => (
               <div key={fact.label} className="cultural-card">
@@ -102,28 +112,20 @@ export function CountryProfile() {
               </div>
             ))}
           </div>
-
-          {/* Timeline */}
-          <div className="cultural-card">
-            <h4 className="font-serif text-xl font-semibold text-foreground mb-6">
-              Historical Timeline
-            </h4>
-            <div className="space-y-4">
-              {timeline.map((item, index) => (
-                <div key={index} className="flex gap-4 items-start">
-                  <div className="w-20 flex-shrink-0">
-                    <span className="text-sakura font-semibold text-sm">
-                      {item.year}
-                    </span>
-                  </div>
-                  <div className="flex-1 pb-4 border-b border-border last:border-0 last:pb-0">
-                    <p className="text-foreground text-sm">{item.event}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
+      </div>
+
+      {/* Historical Timeline - Full Width */}
+      <div className="mt-20">
+        <div className="text-center mb-12">
+          <h3 className="font-serif text-3xl font-semibold text-foreground mb-3">
+            Historical Journey
+          </h3>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            From ancient mythology to modern powerhouse - explore the key moments that shaped Japan's rich history
+          </p>
+        </div>
+        <HistoricalTimeline />
       </div>
     </section>
   );

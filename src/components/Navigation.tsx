@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -91,6 +92,9 @@ export function Navigation() {
               )}
             </a>
           ))}
+          <div className={`ml-2 ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Mobile Menu Button */}

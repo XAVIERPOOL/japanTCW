@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { CulturalAccordion } from "@/components/CulturalAccordion";
+import { BilingualElements } from "@/components/BilingualElements";
 import cuisineImage from "@/assets/japan-cuisine.jpg";
 import fashionImage from "@/assets/japan-fashion.jpg";
 import festivalImage from "@/assets/japan-festival.jpg";
@@ -158,6 +160,24 @@ export function CulturalFeatures() {
               aria-label={`Go to ${features[index].shortTitle}`}
             />
           ))}
+        </div>
+
+        {/* Cultural Accordion - Deep Dive Section */}
+        <div className="mt-20">
+          <div className="text-center mb-10">
+            <h3 className="font-serif text-2xl font-semibold text-foreground mb-3">
+              Explore Cultural Topics
+            </h3>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Dive deeper into specific aspects of Japanese culture through these detailed explorations
+            </p>
+          </div>
+          <CulturalAccordion />
+        </div>
+
+        {/* Bilingual Elements Section */}
+        <div className="mt-20">
+          <BilingualElements />
         </div>
       </div>
     </section>

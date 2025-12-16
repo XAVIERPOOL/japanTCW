@@ -39,9 +39,13 @@ export function HeroSection() {
         animationDelay: "0.8s",
         animationFillMode: "forwards"
       }}>
-          <div className="text-primary-foreground/60 text-sm font-medium">
-            <span className="block">Presented by: Xavier & Friends</span>
-            <span className="block">The Contemporary World | Section A</span>
+          <div className="text-primary-foreground/70 text-sm font-medium space-y-2">
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-1">
+              <span>Lagatic, Xavier Angelo James O. <span className="text-sakura">(BSIT)</span></span>
+              <span>Asoro, John Joseph P. <span className="text-sakura">(BSIT)</span></span>
+              <span>Diana, Emmanuel D. Jr. <span className="text-sakura">(BSFM)</span></span>
+            </div>
+            <span className="block text-primary-foreground/50">The Contemporary World | 1328</span>
           </div>
         </div>
 

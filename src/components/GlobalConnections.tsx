@@ -1,4 +1,5 @@
 import { Globe, Tv, Plane, Store, Users, Wifi } from "lucide-react";
+import { GlobalComparison } from "@/components/GlobalComparison";
 
 const connections = [
   {
@@ -81,6 +82,11 @@ export function GlobalConnections() {
             — Junichiro Tanizaki, Japanese Author
           </cite>
         </blockquote>
+      </div>
+
+      {/* Global Comparison Table */}
+      <div className="mt-16">
+        <GlobalComparison />
       </div>
     </section>
   );

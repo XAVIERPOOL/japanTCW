@@ -7,6 +7,8 @@ import { ContemporaryIssues } from "@/components/ContemporaryIssues";
 import { PersonalReflection } from "@/components/PersonalReflection";
 import { References } from "@/components/References";
 import { Footer } from "@/components/Footer";
+import { ScrollProgress } from "@/components/ScrollProgress";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { Helmet } from "react-helmet-async";
 
 const Index = () => {
@@ -21,6 +23,8 @@ const Index = () => {
       </Helmet>
 
       <div className="min-h-screen">
+        <ScrollProgress />
+        <ScrollToTop />
         <Navigation />
         <main>
           <HeroSection />
