@@ -6,8 +6,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import xavierImg from "@/assets/xavier.jpg";
-import johnJosephImg from "@/assets/john joseph.jpg";
+import xavierImg from "@/assets/Xavier.jpg";
+import johnJosephImg from "@/assets/John Joseph.jpg";
 
 const reflections = [
   {
