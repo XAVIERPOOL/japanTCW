@@ -40,8 +40,8 @@ export function HeroSection() {
         animationFillMode: "forwards"
       }}>
           <div className="text-primary-foreground/60 text-sm font-medium">
-            <span className="block">Presented by: Xavier & Friends</span>
-            <span className="block">The Contemporary World | Section A</span>
+            <span className="block">Presented by: Xavier, John Joseph, Emmanuell, jaymyr, and Den Ver</span>
+            <span className="block">The Contemporary World | 1328</span>
           </div>
         </div>
 
