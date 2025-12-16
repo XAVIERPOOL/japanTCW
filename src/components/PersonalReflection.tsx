@@ -7,7 +7,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import xavierImg from "@/assets/Xavier.jpg";
-import johnJosephImg from "@/assets/John Joseph.jpg";
+import johnJosephImg from "@/assets/johnjoseph.jpg";
+import emmanuelImg from "@/assets/emmanuel.jpg";
+import jaymyrImg from "@/assets/jaymyr.jpg";
 
 const reflections = [
   {
@@ -22,10 +24,12 @@ const reflections = [
   },
   {
     name: "Diana Jr, Emmanuel",
+    image: emmanuelImg,
     reflection: `As a student, I will carry forward the Japanese value of kaizen — continuous improvement — in my own life. I've also gained appreciation for respecting traditions while remaining open to change. These insights will help me navigate our diverse global community with greater empathy and understanding. Japan's approach of selective adaptation offers a model for cultural resilience.`,
   },
   {
     name: "Mallari, Jaymyr",
+    image: jaymyrImg,
     reflection: `The Japanese philosophy of ikigai — finding purpose in life — has resonated deeply with me. This project has shown me how cultural values shape not just traditions but also modern innovations. Japan's ability to honor its past while embracing the future is truly inspiring and offers valuable lessons for all of us navigating an ever-changing world.`,
   },
   {
