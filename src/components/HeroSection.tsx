@@ -45,7 +45,7 @@ export function HeroSection() {
               <span>Asoro, John Joseph P. <span className="text-sakura">(BSIT)</span></span>
               <span>Diana, Emmanuel D. Jr. <span className="text-sakura">(BSFM)</span></span>
               <span>Mallari, Jaymyr Vince A. <span className="text-sakura">(BSHM)</span></span>
-              <span>Alanis, Denver <span className="text-sakura">(BSHM)</span></span>
+              <span>Alanis, Denver T.<span className="text-sakura">(BSHM)</span></span>
             </div>
             <span className="block text-primary-foreground/50">The Contemporary World | 1328</span>
           </div>
