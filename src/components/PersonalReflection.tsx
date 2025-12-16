@@ -6,14 +6,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import xavierImg from "@/assets/xavier.jpg";
+import johnJosephImg from "@/assets/john joseph.jpg";
 
 const reflections = [
   {
     name: "Lagatic, Xavier Angelo James",
+    image: xavierImg,
     reflection: `Exploring Japanese culture has profoundly deepened my understanding of how tradition and modernity can coexist. The concept of wabi-sabi — finding beauty in imperfection — has taught me to appreciate the transient nature of life and culture itself. Through this project, I've learned that globalization is not simply about cultural homogenization. Japan demonstrates how a nation can actively participate in the global community while maintaining its unique identity.`,
   },
   {
     name: "Asoro, John Joseph",
+    image: johnJosephImg,
     reflection: `Cultural awareness has become increasingly important in our interconnected world. Understanding different cultures helps us avoid stereotypes, appreciate diversity, and become better global citizens. Japan's struggles with demographic challenges and work-life balance also mirror issues many nations face, reminding us that we share common human experiences despite our differences.`,
   },
   {
@@ -54,11 +58,20 @@ export function PersonalReflection() {
                       <p>{item.reflection}</p>
                     </div>
 
-                    <div className="mt-8 pt-6 border-t border-border">
-                      <p className="text-foreground font-medium">— {item.name}</p>
-                      <p className="text-muted-foreground text-sm">
-                        Student, The Contemporary World
-                      </p>
+                    <div className="mt-8 pt-6 border-t border-border flex items-center gap-4">
+                      {item.image && (
+                        <img 
+                          src={item.image} 
+                          alt={item.name}
+                          className="w-12 h-12 rounded-full object-cover border-2 border-sakura/30"
+                        />
+                      )}
+                      <div>
+                        <p className="text-foreground font-medium">— {item.name}</p>
+                        <p className="text-muted-foreground text-sm">
+                          Student, The Contemporary World
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
