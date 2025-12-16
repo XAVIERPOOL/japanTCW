@@ -19,7 +19,7 @@ export function Footer() {
               The Contemporary World | Final Project
             </p>
             <p className="text-sm text-primary-foreground/60 mt-1">
-              Submitted: December 2024
+              Submitted: December 2025
             </p>
           </div>
 
@@ -29,7 +29,7 @@ export function Footer() {
               for learning
             </p>
             <p className="text-xs text-primary-foreground/50 mt-2">
-              © 2024 All rights reserved
+              © 2025 All rights reserved
             </p>
           </div>
         </div>
