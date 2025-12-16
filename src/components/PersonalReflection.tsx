@@ -29,7 +29,7 @@ const reflections = [
     reflection: `The Japanese philosophy of ikigai — finding purpose in life — has resonated deeply with me. This project has shown me how cultural values shape not just traditions but also modern innovations. Japan's ability to honor its past while embracing the future is truly inspiring and offers valuable lessons for all of us navigating an ever-changing world.`,
   },
   {
-    name: "Den Ver",
+    name: "Alanis, Denver",
     reflection: `Studying Japan has opened my eyes to the importance of harmony and respect in society. The concept of wa — maintaining social harmony — teaches us the value of considering others in our actions. This project has reinforced my belief that understanding different cultures makes us more thoughtful and compassionate individuals in our global community.`,
   },
 ];
@@ -69,7 +69,7 @@ export function PersonalReflection() {
                       <div>
                         <p className="text-foreground font-medium">— {item.name}</p>
                         <p className="text-muted-foreground text-sm">
-                          Student, The Contemporary World
+                          Student
                         </p>
                       </div>
                     </div>

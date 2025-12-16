@@ -1,4 +1,4 @@
-import { BookOpen, ExternalLink, FileText, Globe, Video, BookMarked } from "lucide-react";
+import { BookOpen, ExternalLink, FileText, Globe, BookMarked } from "lucide-react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -45,13 +45,6 @@ const references = [
     citation: "Statistics Bureau of Japan. (2024). Statistical Handbook of Japan.",
     url: "https://www.stat.go.jp/english/",
   },
-  {
-    type: "Video",
-    icon: Video,
-    citation:
-      "NHK World-Japan. (2023). Japan's Cultural Heritage [Documentary series]. NHK.",
-    url: "https://www3.nhk.or.jp/nhkworld/",
-  },
 ];
 
 // Count sources by type
@@ -64,7 +57,6 @@ const sourceStats = [
   { type: "Book", count: sourceCounts["Book"] || 0, icon: BookMarked },
   { type: "Article", count: sourceCounts["Article"] || 0, icon: FileText },
   { type: "Website", count: sourceCounts["Website"] || 0, icon: Globe },
-  { type: "Video", count: sourceCounts["Video"] || 0, icon: Video },
 ];
 
 export function References() {
@@ -83,7 +75,7 @@ export function References() {
         </div>
 
         {/* Source Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10 max-w-2xl mx-auto">
           {sourceStats.map((stat, index) => (
             <motion.div
               key={stat.type}
